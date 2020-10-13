@@ -20,7 +20,7 @@ First you need to manually install the uldp-client-api and uldp-output artifacts
 
 2 options there...
 
-####Option 1: Using StreamBase Studio
+#### Option 1: Using StreamBase Studio
 run/ run-configuration
 
 Select “maven build”
@@ -49,14 +49,14 @@ file
 pomFile
 <path to the zip file>/lmi-uldp-client-api-6.2.1.pom
 
-####Option 2: Using maven command
+#### Option 2: Using maven command
 ```
 mvn install:install-file -Dfile= <path to the zip file>/lmi-uldp-client-api-6.2.1.jar -DpomFile <path to the zip file>/lmi-uldp-client-api-6.2.1.pom
 mvn install:install-file -Dfile= <path to the zip file>/uldp-output-1.0.0-SNAPSHOT.jar -DpomFile <path to the zip file>/uldp-output-1.0.0-SNAPSHOT.pom
 
 ```
 
-##Step 2: Adding the Maven dependency for the project
+## Step 2: Adding the Maven dependency for the project
 Two options again
 
 ### Option 1/ Using UI
@@ -78,7 +78,7 @@ You can also add manually the following dependency in the POM.xml file:
 </dependency>
 
 
-##Step #3: Adding the ULDP output adapter to your flow
+## Step #3: Adding the ULDP output adapter to your flow
 
 
 Now right click on project name, and choose Streambase/Refresh Project Typecheck Environment
