@@ -1,4 +1,5 @@
 # LMI ULDP output adapter for Streambase
+LMI Adapter for TIBCO StreamBase® - is an open-source adapter using which users can send StreamBase events to TIBCO LogLogic® Log Management Intelligence (LMI).
 
 ## Pre-requisites
 You need to have LMI 6.2.1 or later, you will need the ULDP Java package located on the supplemental disk (lmi-uldp-client-api-6.x.y.jar and lmi-uldp-client-api-6.x.y.pom)
