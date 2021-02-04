@@ -1,27 +1,26 @@
-# LMI ULDP output adapter for Streambase
-LMI Adapter for TIBCO StreamBase® - is an open-source adapter using which users can send StreamBase events to TIBCO LogLogic® Log Management Intelligence (LMI).
+# LMI Adapter for TIBCO StreamBase®
+LMI Adapter for TIBCO StreamBase® is an open-source adapter that can send StreamBase® events to TIBCO LogLogic® Log Management Intelligence (LMI).
 
-## Pre-requisites
-You need to have LMI 6.2.1 or later, you will need the ULDP Java package located on the supplemental disk (lmi-uldp-client-api-6.x.y.jar and lmi-uldp-client-api-6.x.y.pom)
-You need maven and Java installed to build the artifacts from sources.
+## Prerequisites
+You need to have LogLogic® LMI 6.2.1 or later, as well as the ULDP Java package located on the supplemental disk (lmi-uldp-client-api-6.x.y.jar and lmi-uldp-client-api-6.x.y.pom). You will also need Apache Maven and Java installed to build the artifacts from sources.
 
-## Howto build the uldp-client-api artifact from the sources
-First you need to manually install the uldp-client-api artifact in your maven repository. 
+## How to build the uldp-client-api artifact from the sources
+First, you need to manually install the uldp-client-api artifact in your Maven repository. 
 ```
 mvn install:install-file -Dfile= <path to the zip file>/lmi-uldp-client-api-6.2.1.jar -DpomFile <path to the zip file>/lmi-uldp-client-api-6.2.1.pom
 ```
 You may have to change the version referenced in the POM file for this artifact to the version you have (in the file, 6.2.1)
 Then use  ```mvn clean install``` to build the artifact (uldp-output-1.0.0-SNAPSHOT.jar in the target directory)
-The POM file corresponding to the artifact is the POM file at the root, you can copy it as uldp-output-1.0.0-SNAPSHOT.pom for the following.
+The POM file corresponding to the artifact is the POM file at the root, you can copy it as uldp-output-1.0.0-SNAPSHOT.pom.
 
 ## Usage with StreamBase 10.x
 
-### Step 1: install manually a Maven artifact
-First you need to manually install the uldp-client-api and uldp-output artifacts in your maven repository.
+### Step 1: manually install a Maven artifact
+First, you need to manually install the uldp-client-api and uldp-output artifacts in your Maven repository.
 
-2 options there...
+There are 2 options to do this:
 
-#### Option 1: Using StreamBase Studio
+#### Option 1: Using TIBCO StreamBase® Studio
 run/ run-configuration
 
 Select “maven build”
@@ -50,7 +49,7 @@ file
 pomFile
 <path to the zip file>/lmi-uldp-client-api-6.2.1.pom
 
-#### Option 2: Using maven command
+#### Option 2: Using Maven command
 ```
 mvn install:install-file -Dfile= <path to the zip file>/lmi-uldp-client-api-6.2.1.jar -DpomFile <path to the zip file>/lmi-uldp-client-api-6.2.1.pom
 mvn install:install-file -Dfile= <path to the zip file>/uldp-output-1.0.0-SNAPSHOT.jar -DpomFile <path to the zip file>/uldp-output-1.0.0-SNAPSHOT.pom
@@ -60,7 +59,7 @@ mvn install:install-file -Dfile= <path to the zip file>/uldp-output-1.0.0-SNAPSH
 ## Step 2: Adding the Maven dependency for the project
 Two options again
 
-### Option 1/ Using UI
+### Option 1: Using UI
 Right-click the StreamBase project, then choose Maven/Add dependency…
 
 group ID: com.loglogic.adapter
@@ -69,7 +68,7 @@ artifact ID: uldp-output
 
 version: 1.0.0-SNAPSHOT
 
-### Option 2/ edition POM.xml
+### Option 2: edition POM.xml
 You can also add manually the following dependency in the POM.xml file:
 
 <dependency>
@@ -82,7 +81,7 @@ You can also add manually the following dependency in the POM.xml file:
 ## Step #3: Adding the ULDP output adapter to your flow
 
 
-Now right click on project name, and choose Streambase/Refresh Project Typecheck Environment
+Now, right-click on project name, and choose Streambase/Refresh Project Typecheck Environment
 
 This will load the new Output Adapter class and make it ready for addition to the flow.
 
@@ -124,4 +123,6 @@ Then choose Project/LogLogic ULDP.
 
 
 Double click to set the properties, at least the ULDP host should be set.
+
+Copyright © TIBCO Software Inc. 2021
 
